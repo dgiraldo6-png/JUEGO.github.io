@@ -1,0 +1,60 @@
+BRANDQUEST — MARKET CITY
+========================
+
+Cómo jugar:
+1. Descomprime el archivo ZIP.
+2. Abre la carpeta BrandQuest_MarketCity en Visual Studio Code.
+3. Abre index.html y selecciona "Open with Live Server".
+4. Personaliza tu avatar.
+5. En el mapa, entra a los edificios para completar las misiones en orden.
+6. Selecciona una respuesta y pulsa COMPROBAR RESPUESTA.
+7. Si te equivocas, lee la explicación y vuelve a intentarlo.
+8. Gana XP y monedas para hacer crecer tu tienda.
+
+Archivos:
+- index.html: estructura del juego.
+- styles.css: diseño visual pixel-art.
+- script.js: misiones, respuestas, progreso, monedas y avatar.
+- assets/: ilustraciones del mapa, avatar, personajes e interiores.
+
+Es una versión web educativa con resultados y economía simulados.
+
+
+ACTUALIZACIÓN — PERSONALIZACIÓN DEL AVATAR
+- Ahora puedes elegir entre seis personajes base.
+- Puedes cambiar peinado, color de cabello, ropa, calzado y accesorios.
+- La vista previa y las etiquetas del look se actualizan al seleccionar opciones.
+- El botón Aleatorio genera una combinación de estilo.
+- Pulsa CONFIRMAR AVATAR para guardar visualmente tu elección durante la partida.
+
+CORRECCIÓN DE AVATAR Y PERSONAJES
+- El panel de personajes ahora mantiene las tarjetas dentro del marco.
+- Se amplió el espacio de la sección superior para que los controles del avatar sean accesibles.
+- Peinado, color de cabello, ropa, calzado y accesorios ahora tienen selección activa visible.
+- La vista previa actualiza los indicadores de cada atributo al seleccionar una opción.
+- Los seis personajes tienen retratos pixel art nuevos y mejor encuadrados.
+
+
+ÚLTIMO AJUSTE — SELECTOR DE PERSONAJES
+- Se retiraron las opciones de peinado, color de cabello, ropa, calzado y accesorios.
+- Se conserva únicamente la selección entre seis personajes y el nombre del jugador.
+- Se reemplazaron las imágenes de los avatares por tarjetas completas para mostrar el cuerpo entero.
+- Se ajustó la vista previa para contener la imagen completa sin recortarla.
+- El resto del juego permanece igual.
+
+
+AJUSTE VISUAL DEL PANEL DE PERSONAJES
+- Se mantuvo el panel compacto, con la misma altura aproximada del diseño anterior.
+- Los cuatro personajes ahora se muestran completos dentro de sus tarjetas.
+- Se alinearon las imágenes, nombres, descripciones e iconos.
+- Se corrigió el recorte usando imágenes de retrato y ajuste de imagen contenido.
+- No se modificaron las demás secciones ni las funciones del juego.
+
+
+ACTUALIZACIÓN DE DISTRIBUCIÓN — REFERENCIA 24/11/2026
+- Se conserva la organización de la captura: avatar arriba a la izquierda, personajes arriba al centro, perfiles arriba a la derecha, ciudad abajo a la izquierda/centro e interiores abajo a la derecha.
+- Se compactó la fila superior para evitar paneles demasiado altos.
+- El avatar solo permite escribir el nombre y elegir entre seis personajes.
+- Se retiraron controles de peinado, cabello, ropa, calzado y accesorios.
+- Las cuatro tarjetas de personajes del juego ahora se pueden seleccionar y quedan resaltadas.
+- Los retratos se reemplazaron por imágenes pixel-art completas y se muestran con object-fit: contain para evitar recortes.

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrandQuest — Market City</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="game-shell">
+    <header class="topbar">
+      <div class="brand-lockup">
+        <div class="brand-mark">BQ</div>
+        <div><strong>BRANDQUEST</strong><small>MARKET CITY</small></div>
+      </div>
+      <div class="player-stats">
+        <div class="stat"><span>🪙</span><b id="coins">1,000</b><small>MONEDAS</small></div>
+        <div class="stat"><span>⭐</span><b id="xp">0</b><small>XP</small></div>
+        <div class="level-pill">NIVEL <b id="level">1</b></div>
+      </div>
+      <button type="button" class="sound-button" id="soundBtn" title="Activar o desactivar sonido">♫</button>
+    </header>
+
+    <main class="dashboard">
+      <section class="panel avatar-panel">
+        <div class="panel-heading"><span class="heading-icon">✦</span> CREA TU AVATAR</div>
+        <div class="avatar-preview">
+          <div class="avatar-stage">
+            <img id="avatarImage" src="assets/avatar-1.png" alt="Avatar seleccionado de BrandQuest">
+          </div>
+          <div class="avatar-name" id="avatarName">Nova</div>
+        </div>
+        <div class="avatar-controls">
+          <label>Nombre del jugador<input id="playerName" maxlength="14" value="Nova"></label>
+          <div class="choice-group avatar-select-group">
+            <span>Elige tu personaje</span>
+            <div class="avatar-picker" id="avatarPicker">
+              <button type="button" class="avatar-pick active" data-avatar="1" title="Nova"><img src="assets/avatar-1.png" alt="Nova"></button>
+              <button type="button" class="avatar-pick" data-avatar="2" title="Alex"><img src="assets/avatar-2.png" alt="Alex"></button>
+              <button type="button" class="avatar-pick" data-avatar="3" title="Mika"><img src="assets/avatar-3.png" alt="Mika"></button>
+              <button type="button" class="avatar-pick" data-avatar="4" title="Leo"><img src="assets/avatar-4.png" alt="Leo"></button>
+              <button type="button" class="avatar-pick" data-avatar="5" title="Sam"><img src="assets/avatar-5.png" alt="Sam"></button>
+              <button type="button" class="avatar-pick" data-avatar="6" title="Dani"><img src="assets/avatar-6.png" alt="Dani"></button>
+            </div>
+          </div>
+          <button type="button" class="primary-button" id="saveAvatar">CONFIRMAR PERSONAJE</button>
+          <p class="tiny-note" id="avatarNote">Selecciona tu personaje para comenzar.</p>
+        </div>
+      </section>
+
+      <section class="panel characters-panel">
+        <div class="panel-heading">PERSONAJES DEL JUEGO</div>
+        <div class="character-grid">
+          <button type="button" class="character-card" data-role="Diseñadora">
+            <img src="assets/designer.jpg" alt="Diseñadora creativa">
+            <b>Diseñadora</b>
+          </button>
+          <button type="button" class="character-card" data-role="Asesor de marketing">
+            <img src="assets/marketer.jpg" alt="Asesor de marketing">
+            <b>Asesor de marketing</b>
+          </button>
+          <button type="button" class="character-card" data-role="Inversionista">
+            <img src="assets/investor.jpg" alt="Inversionista">
+            <b>Inversionista</b>
+          </button>
+          <button type="button" class="character-card" data-role="Cliente objetivo">
+            <img src="assets/customer.jpg" alt="Cliente objetivo">
+            <b>Cliente objetivo</b>
+          </button>
+        </div>
+      </section>
+
+      <section class="panel profiles-panel">
+        <div class="panel-heading">PERFILES DE CLIENTES</div>
+        <div class="profile-list">
+          <button type="button" class="profile-card" data-profile="Estudiantes"><span class="profile-emoji">🎒</span><span><b>Estudiantes</b><small>Buscan precio y estilo.</small></span></button>
+          <button type="button" class="profile-card" data-profile="Deportistas"><span class="profile-emoji">🏋️</span><span><b>Deportistas</b><small>Valoran comodidad y rendimiento.</small></span></button>
+          <button type="button" class="profile-card" data-profile="Jóvenes profesionales"><span class="profile-emoji">💻</span><span><b>Jóvenes profesionales</b><small>Prefieren diseño y calidad.</small></span></button>
+        </div>
+        <div class="profile-feedback" id="profileFeedback">Selecciona un perfil para conocer sus intereses.</div>
+      </section>
+
+      <section class="panel city-panel">
+        <div class="city-title">
+          <div class="city-title-tag">🏙️ MARKET CITY</div>
+          <div class="city-subtitle">La ciudad de los emprendimientos</div>
+        </div>
+        <img class="city-map" src="assets/market-city.png" alt="Mapa isométrico de Market City">
+        <div class="city-hud">
+          <div class="mini-player"><span class="mini-avatar">🧑🏻‍🎤</span><span><b id="hudName">Nova</b><small>Emprendedor/a · Nivel <i id="hudLevel">1</i></small></span></div>
+          <div class="hud-progress"><div id="progressFill"></div></div>
+          <small id="progressText">0 de 4 misiones completadas</small>
+        </div>
+        <button type="button" class="building building-studio" data-mission="0"><span>🎨</span><b>ESTUDIO<br>CREATIVO</b><i id="mark0">🔒</i></button>
+        <button type="button" class="building building-agency" data-mission="2"><span>📣</span><b>AGENCIA<br>PUBLICITARIA</b><i id="mark2">🔒</i></button>
+        <button type="button" class="building building-market" data-mission="1"><span>🛍️</span><b>MERCADO<br>COMERCIAL</b><i id="mark1">🔒</i></button>
+        <button type="button" class="building building-innovation" data-mission="3"><span>💡</span><b>CENTRO DE<br>INNOVACIÓN</b><i id="mark3">🔒</i></button>
+        <button type="button" class="building building-shop" id="myShop"><span>🏪</span><b>MI TIENDA</b><small id="shopLevel">Nivel inicial</small></button>
+        <div class="map-hint">Haz clic en un edificio para entrar y cumplir una misión</div>
+      </section>
+
+      <section class="panel interiors-panel">
+        <div class="panel-heading">INTERIORES DE LOS LUGARES</div>
+        <div class="interior-grid">
+          <button type="button" class="interior-card" data-mission="0"><img src="assets/studio.jpg" alt="Interior del estudio creativo"><b>Estudio creativo</b><small>Diseña tu marca</small></button>
+          <button type="button" class="interior-card" data-mission="2"><img src="assets/agency.jpg" alt="Interior de la agencia publicitaria"><b>Agencia publicitaria</b><small>Lanza tu campaña</small></button>
+          <button type="button" class="interior-card" data-mission="1"><img src="assets/market.jpg" alt="Interior del mercado comercial"><b>Mercado comercial</b><small>Conoce a tus clientes</small></button>
+          <button type="button" class="interior-card innovation-interior" data-mission="3"><div class="innovation-art">🌐</div><b>Centro de innovación</b><small>Analiza tus resultados</small></button>
+        </div>
+        <div class="shop-upgrade">
+          <div><b>Tu tienda</b><small id="shopDescription">Una tienda vacía espera tu primera marca.</small></div>
+          <span id="shopVisual">🏬</span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer-bar">
+      <span>© BRANDQUEST · APRENDE JUGANDO</span>
+      <span>Explora · Crea · Promociona · Crece</span>
+      <button type="button" id="resetGame">Reiniciar partida ↻</button>
+    </footer>
+  </div>
+
+  <div class="modal-backdrop" id="missionModal" aria-hidden="true">
+    <section class="mission-modal">
+      <button type="button" class="close-modal" id="closeModal" aria-label="Cerrar">×</button>
+      <div class="mission-kicker" id="missionKicker">MISIÓN 1 · ESTUDIO CREATIVO</div>
+      <h2 id="missionTitle">Crea tu identidad de marca</h2>
+      <p class="mission-intro" id="missionIntro">Tu primera decisión define cómo te reconocerán tus clientes.</p>
+      <div class="mission-progress"><span id="missionProgress"></span></div>
+      <div id="missionBody"></div>
+      <div class="feedback-box" id="feedbackBox" hidden></div>
+      <div class="modal-actions">
+        <button type="button" class="secondary-button" id="hintButton">Dame una pista</button>
+        <button type="button" class="primary-button" id="answerButton">COMPROBAR RESPUESTA</button>
+      </div>
+    </section>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
